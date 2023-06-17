@@ -173,34 +173,3 @@ Input:
 Output:
 (4, 9, 1, 5, 6)
 '''
-
-
-
-# 5. Python program to remove all tuples of length K
-# -> 
-# Input:
-# [(1, 4), (2), (4,5,6,8), (26), (3, 0, 1), (4)] k = 1
-
-# Output:
-# [(1, 4), (4, 5, 6, 8), (3, 0, 1)]
-
-l1 =[(1, 4), (2), (4,5,6,8), (26), (3, 0, 1), (4,90)]
-
-# for i in l1:
-#     # print(i)
-
-#     if len(list(i)) == 1:
-#         l1.remove(i)
-
-# print(l1)
-
-# print(type(l1[1]))
-
-# x = (2,)
-# print(type(x))  # <class 'int'>
-
-for i in l1:
-    if type(i) == int:
-        l1.remove(i)
-
-print(l1)
