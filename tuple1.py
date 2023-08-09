@@ -173,3 +173,65 @@ Input:
 Output:
 (4, 9, 1, 5, 6)
 '''
+
+
+n1,n2 = 0,1
+
+print(n1,n2,end=' ')  # 0 1
+
+
+for i in range(6):
+    n3 = n1 + n2
+    print(n3,end=' ')  # 0 1 1 2 3 5 8 13
+    n1 = n2
+    n2 = n3
+
+print()
+list1 = [10,290,32,65,32,2,1,78]
+
+list1.sort()
+print(list1[-2])
+
+# -------------------------------------------------
+
+tupList = [("python", 7), ("learn" , 1), ("programming", 7), ("code" , 3), ('Tanush', 7)]
+
+list1 = []
+for subtup in tupList:
+    print(subtup)
+    list1.append(subtup[1])
+
+print(list1)
+max1 = max(list1)
+
+print(max1)   # 7
+
+res = []
+for i in tupList:
+    if max1 in i:
+        res.append(i[0])
+
+str1 = '_'.join(res)
+print(str1)   # python_programming_Tanush
+
+# 13. Python program to order tuples by list
+# ->
+# Input:
+# tupList = [('l', 5), ('k', 2), ('a', 1), ('e', 6)], sortList = ['l', 'a', 'k', 'e']
+
+# Output:
+# [('l', 5), ('a', 1), ('k', 2), ('e', 6)]
+
+
+tupList = [('l', 5), ('k', 2), ('a', 1), ('e', 6)]
+sortList = ['l', 'a', 'k', 'e']
+
+ans = []
+
+for i in sortList:    #  i = 'l'
+    for j in range(len(tupList)):   # 0,1,2,3   # j = 0
+        if i == tupList[j][0]:   # 'l' == 'l'
+            ans.append(tupList[j])
+            break
+
+print(ans)   # [('l', 5), ('a', 1), ('k', 2), ('e', 6)]
