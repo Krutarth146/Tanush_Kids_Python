@@ -50,3 +50,17 @@ if len(password) >= 6 and len(password) <= 16:
         print("Try Again")
 else:
     print("Try Again")
+
+
+
+list1  = [10,90,34,56,32,89,1,3]
+
+# list1.sort(reverse = True)
+# print(list1)
+
+
+for k in range(len(list1)): #   k = 0 , list1[k] = 10
+    for tanush in range(k+1,len(list1)):   # 2
+        if list1[k] > list1[tanush]:   # 10 > 34
+            list1[k], list1[tanush] = list1[tanush], list1[k]
+print(list1)
