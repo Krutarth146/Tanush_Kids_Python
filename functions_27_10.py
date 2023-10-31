@@ -61,3 +61,98 @@ def Agarwal(*args, **kwargs):
         print(i)
 
 Agarwal(10,20,30,name = "Tanush", Roll = 90, address = 'Ahm')
+
+
+def Ayush():
+    return 90
+
+print(Ayush())   # 90
+x = Ayush()
+print(x)
+
+def Royal():
+    return [10,20,30], "Aamana" , 90
+
+
+print(Royal()[1])  # Aamana
+
+
+
+# def Tan():
+#     def Aam():
+#         print("Inside Aam Function")
+#     print("Inside Tan Function")
+#     return Aam()
+
+# Tan()
+# def Dev(aman):
+#     def Tanush(rama):
+#         print("Inside Tanush FUnction")
+#         return rama()
+#     print("Inside Dev FUnction")
+#     return Tanush(aman)
+
+# def Agni():
+#     print("This is Agni Function")
+
+
+# Dev(Agni)
+
+
+def Royal(student):
+    def Aman(x):
+        print("This is Aman FUnction")
+    print('This is Royal Function')
+    return Aman(student)
+
+@Royal   # Custom Decorator ----> Django (Web-Application) & Oops (Object Oriented Concepts)
+def Student():
+    print("This is Diwali gettoGather")
+
+# Royal(Student)
+
+
+# @classmethod, @staticmethod ---> Inbuilt Decorator
+
+
+# Type - 4
+
+def power(x,y):
+    return x ** y
+
+
+print(power(4,3))   # 4**3 ---> 4*4*4  ->  64
+
+
+#- ----------------------------------------------
+def Series(num):
+    list1 = []
+    for j in range(1,num+1):
+        # print(j,end=' ')   # 1 2 3 4 5 6 7 8 9 10
+        list1.append(j)
+    return list1
+
+
+print(Series(10))   # 1
+
+
+#- ----------------------------------------------
+
+# Generators (yield Keyword)
+
+def Series(num):
+    list1 = []
+    for j in range(1,num+1):
+        yield j
+
+
+x = Series(10)
+
+print(x)
+print(x.__next__())   # 1
+print(x.__next__())   # 2
+print(x.__next__())   # 3
+
+
+for k in Series(10):
+    print(k)   # 1 2 3 4 5 6
